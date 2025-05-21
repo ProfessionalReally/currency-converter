@@ -1,6 +1,6 @@
 {
   "name": "Currency Converter",
-  "short_name": "CurrencyConverter",
+  "short_name": "CurrencyConvertor",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
