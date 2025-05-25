@@ -17,6 +17,7 @@ export const CurrencyDropdown: React.FC<CurrencyDropdownProps> = memo(
 					{code && (
 						<img
 							src={`https://flagcdn.com/w40/${code}.webp`}
+							className='rounded border border-gray-300 bg-gray-200 p-0.5 shadow-md'
 							alt='flag-icon'
 						/>
 					)}
