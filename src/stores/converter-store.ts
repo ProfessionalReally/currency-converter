@@ -29,8 +29,8 @@ class ConverterStore {
 		this.initialize()
 	}
 
-	private initialize = () => {
-		this.initRates()
+	private initialize = async () => {
+		await this.initRates()
 		this.initPairs()
 		this.setupAutoSavePairs()
 	}
@@ -53,8 +53,8 @@ class ConverterStore {
 		}
 	}
 
-	private initRates = () => {
-		const rates = loadFromStorage(LOCAL_STORAGE_KEY_RATES)
+	private initRates = async () => {
+		const rates = await loadFromStorage(LOCAL_STORAGE_KEY_RATES)
 		if (rates) {
 			runInAction(() => {
 				for (const rate in rates) {

@@ -5,6 +5,7 @@ import { observer } from 'mobx-react-lite'
 import { converterStore } from '../stores/converter-store'
 import { useCallback } from 'react'
 import type { Pair } from '../types'
+import { motion } from 'framer-motion'
 
 export const CurrencyConvertor = observer(() => {
 	const { pairs, addPair } = converterStore
@@ -19,9 +20,17 @@ export const CurrencyConvertor = observer(() => {
 		>
 			{pairs.length > 0 &&
 				pairs.map((pair: Pair) => (
-					<PairCard pair={pair} key={pair.id} />
+					<motion.div
+						key={pair.id}
+						initial={{ opacity: 0, height: 0 }}
+						animate={{ opacity: 1, height: 'auto' }}
+						exit={{ opacity: 0, height: 0 }}
+						transition={{ duration: 0.2 }}
+						layout
+					>
+						<PairCard pair={pair} />
+					</motion.div>
 				))}
-
 			<Button
 				onClick={handleAddPair}
 				className='border-md rounded-xl bg-blue-600 px-3 py-2 text-xl text-white hover:bg-blue-700 focus:ring-4 focus:ring-blue-300'
