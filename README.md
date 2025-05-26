@@ -3,6 +3,9 @@
 Single Page Application (SPA) for currency conversion with support for displaying and interacting with multiple currency
 pairs simultaneously. Built with **React**, **TypeScript**, **MobX**.
 
+![default_pages](https://github.com/user-attachments/assets/cb7529b8-fbc2-4e73-95f0-afd35b5e0298)
+
+
 ---
 
 ## 📌 Key Features
