@@ -40,6 +40,9 @@ class ConverterStore {
 		if (pairs && pairs.length > 0) {
 			runInAction(() => {
 				this.pairs = pairs
+				for (const pair of this.pairs) {
+					this.convertPair(pair.id)
+				}
 			})
 		} else {
 			runInAction(() => {
